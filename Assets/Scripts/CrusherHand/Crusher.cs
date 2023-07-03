@@ -5,15 +5,15 @@ using UnityEngine;
 public class Crusher : MonoBehaviour
 {
     [SerializeField] float rotatingSpeed = 0.5f;
-    [SerializeField] float maxSize = 28.0f;
+    [SerializeField] float maxSize = 14.0f;
     [SerializeField] int maxLevel = 4;
 
-    float initialSize = 14.0f;
+    float initialSize = 7.0f;
     List<float> levelSizes = new List<float>();
 
     void Update()
     {
-        transform.Rotate(new Vector3(0, rotatingSpeed * Time.deltaTime, 0));
+        transform.Rotate(new Vector3(0, 0, rotatingSpeed * Time.deltaTime));
     }
 
     public void IncreaseSize(int level)
@@ -22,7 +22,8 @@ public class Crusher : MonoBehaviour
 
         Vector3 newScale = transform.localScale;
         newScale.x = levelSizes[level - 1];
-        newScale.z = levelSizes[level - 1];
+        newScale.y = levelSizes[level - 1];
+        Debug.Log("size " + newScale);
         transform.localScale = newScale;
     }
 

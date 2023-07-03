@@ -62,7 +62,7 @@ public class GameProgress : MonoBehaviour
 
     public void FirstInitialization()
     {
-        Money = 12220;
+        Money = 0;
         HandLevel = 1;
         ConveyorLevel = 1;
         CrusherSizeLevel = 1;

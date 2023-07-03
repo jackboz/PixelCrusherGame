@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (gameProgress.LevelProgress > 0.97) SceneManager.LoadScene("EndLevelScene");
+        if (gameProgress.LevelProgress > 0.9) SceneManager.LoadScene("EndLevelScene");
     }
 
     public void SwitchToLevel()
